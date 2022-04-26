@@ -1,0 +1,15 @@
+
+
+
+MEJORAS
+Implementar HATOAS
+Los Entyties deberían llevar Maps y no Lists en los campos para que no hubiera campos duplicados
+Demasiada lógica de negocio concentrada en mapper:
+    La solución sería que service tubiera un método para guardar cada típo de DTO y allí estubiera la lógica en vez de
+    un método fijo en service trabajando solo con los DTOs puros y no también con los de cliente
+
+Separar web de Rest, plantear la Web como un cliente del servicio Rest
+Mejorar excepciones Investigar el funcionamiento Exception Handler, posible contradicción entre HttpStatus de l excepción concreta
+y el HttpStatus lanzado por ResponseEntityExceptionHandler
+
+

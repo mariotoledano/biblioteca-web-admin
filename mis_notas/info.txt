@@ -1,0 +1,34 @@
+
+ENDPOINTS:
+    #Swagger
+        http://localhost:8085/swagger-ui/index.html
+    #H2 Base de Datos
+        http://localhost:8085/h2
+    #Web
+        http://localhost:8085/
+    #Actuator
+        http://localhost:8085/actuator
+
+GESTIÓN RECURSOS
+    #Creación
+        Texto se crea vinculado a un Autor y a un Tema previamente generados (se crea con body aportando nombre de autor y tema
+        , estudiar posiblidad de crear en path con ids)
+        POST textos body-->> AutorNombre y TemaNombre ya registrados
+        POST textos/autores/{id}/temas/{id}
+        Autor, Tema y Supertema se crea sin víncular, ni posibilidad de hacerlo en el momento de creación
+        POST recurso(temas, supertemas o autores)
+    #Añadir Vínculo
+        Texto vinculado a Autor y Tema en creación
+        Tema y Supertema con Put en path tema-->> supertema (añade el vínculo, no lo sustituye)
+    #Eliminar Vínculo
+        DELETE recurso/{id}/unlink/recurso/{id}
+        tema -->> supertema
+        texto -->> autor
+        texto -->> tema
+
+    #Eliminar recurso
+        DELETE resource/{id}
+
+
+
+
