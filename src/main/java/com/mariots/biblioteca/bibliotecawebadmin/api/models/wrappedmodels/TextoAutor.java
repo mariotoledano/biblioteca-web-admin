@@ -1,4 +1,4 @@
-package com.mariots.biblioteca.bibliotecawebadmin.api.models.objetosvinculados;
+package com.mariots.biblioteca.bibliotecawebadmin.api.models.wrappedmodels;
 
 import com.mariots.biblioteca.bibliotecawebadmin.api.models.Texto;
 import com.mariots.biblioteca.bibliotecawebadmin.api.models.Autor;

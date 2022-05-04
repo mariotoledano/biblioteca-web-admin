@@ -18,7 +18,7 @@
 </head>
 <!-- Body -->
 <body class="my-4 mx-5">
-<form id="formulario">
+<form id="form-autor">
     <!-- AUTOR -->
     <h3 class="mb-3">Autor</h3>
     <div class="ms-4">
@@ -93,7 +93,7 @@
         return json;
       }
 <!--Al ejecutar el submit-->
-      $("#formulario").on("submit", function (e) {
+      $("#form-autor").on("submit", function (e) {
         e.preventDefault();
         const form = $(e.target);
         const json = convertFormToJSON(form);
@@ -116,7 +116,7 @@
                 $("#alertaExito").html("El Autor: "+JSON.stringify(data)+" ha sido guardado en la BBDD correctamente.<br/>Status: "+status).show()+".";
                 setTimeout(function(){
                     $("#alertaExito").hide();
-                    },5000);
+                    },20000);
             document.getElementById("form-autor").reset();
             }
         });

@@ -43,7 +43,13 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 		</dependency>
 
-		<!--PERSISTENCIA Y BBDD-->
+		<!--CLOUD-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>3.1.2</version>
+		</dependency>
+
 
 
 		<!--MONITORIZACION-->

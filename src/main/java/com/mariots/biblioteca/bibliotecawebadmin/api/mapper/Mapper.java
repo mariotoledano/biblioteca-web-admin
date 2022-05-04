@@ -7,7 +7,7 @@ import com.mariots.biblioteca.bibliotecawebadmin.api.models.Texto;
 
 public interface Mapper {
 
-    //Entidad <--> Dto
+    //RecursoNuevo <--> Recurso
 
 //    Autor toDto(AutorEntity autorEntity);
 //    AutorEntity toEntity(Autor autor);

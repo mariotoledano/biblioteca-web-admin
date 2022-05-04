@@ -1,18 +1,11 @@
 package com.mariots.biblioteca.bibliotecawebadmin.core.service;
 
 import com.mariots.biblioteca.bibliotecawebadmin.api.models.Autor;
-import com.mariots.biblioteca.bibliotecawebadmin.api.models.Supertema;
-import com.mariots.biblioteca.bibliotecawebadmin.api.models.Tema;
-import com.mariots.biblioteca.bibliotecawebadmin.api.models.Texto;
-
-import com.mariots.biblioteca.bibliotecawebadmin.api.models.objetosvinculados.TemaSupertema;
-import com.mariots.biblioteca.bibliotecawebadmin.api.models.objetosvinculados.TextoAutor;
-import com.mariots.biblioteca.bibliotecawebadmin.api.models.objetosvinculados.TextoTema;
-
-import java.util.List;
+import com.mariots.biblioteca.bibliotecawebadmin.api.models.nuevorecurso.AutorNuevo;
+import org.springframework.http.ResponseEntity;
 
 public interface ServiceBiblioteca {
-//    Autor guardarAutor(Autor autor);
+    ResponseEntity<Autor> guardarAutor(AutorNuevo autor);
 //    Tema guardarTema(Tema tema);
 //    Supertema guardarSupertema(Supertema supertema);
 //    Texto guardarTexto(Texto texto);

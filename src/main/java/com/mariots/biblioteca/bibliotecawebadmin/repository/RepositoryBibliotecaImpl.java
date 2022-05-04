@@ -1,107 +1,104 @@
-//package com.mariots.biblioteca.bibliotecawebadmin.repository;
-//
-//import org.springframework.stereotype.Repository;
-//
-//@Repository
-//public class RepositoryBibliotecaImpl implements RepositoryBiblioteca {
-//
-//    //METODOS GUARDAR
-//    @Override
-//    public AutorEntity guardarAutor(AutorEntity autorEntity) {
-//        return autorJpaRepository.save(autorEntity);
-//    }
-//
-//    @Override
-//    public TemaEntity guardarTema(TemaEntity temaEntity) {
-//        return temaJpaRepository.save(temaEntity);
-//    }
-//
-//    @Override
-//    public SupertemaEntity guardarSupertema(SupertemaEntity supertemaEntity) {
-//        return supertemaJpaRepository.save(supertemaEntity);
-//    }
-//
-//    @Override
-//    public TextoEntity guardarTexto(TextoEntity textoEntity) {
-//        return textoJpaRepository.save(textoEntity);
-//    }
-//
-//    //MÉTODOS RECUPERAR
-//    @Override
-//    public List<AutorEntity> recuperarAutores() {
-//        return autorJpaRepository.findAll();
-//    }
-//
-//    @Override
-//    public List<TemaEntity> recuperarTemas() {
-//        return temaJpaRepository.findAll();
-//    }
-//
-//    @Override
-//    public List<SupertemaEntity> recuperarSupertemas() {
-//        return supertemaJpaRepository.findAll();
-//    }
-//
-//    @Override
-//    public List<TextoEntity> recupearTextos() {
-//        return textoJpaRepository.findAll();
-//    }
-//
-//    //MÉTODOS RECUPERAR POR ID
-//    @Override
-//    public Optional<AutorEntity> recuperarAutorPorId(int idAutor) {
-//        return autorJpaRepository.findById(idAutor);
-//    }
-//
-//    @Override
-//    public Optional<TemaEntity> recuperarTemaPorId(int idTema) {
-//        return temaJpaRepository.findById(idTema);
-//    }
-//
-//    @Override
-//    public Optional<SupertemaEntity> recuperarSupertemaPorId(int idSupertema) {
-//        return supertemaJpaRepository.findById(idSupertema);
-//    }
-//
-//    @Override
-//    public Optional<TextoEntity> recuperarTextoPorId(int idTexto) {
-//        return textoJpaRepository.findById(idTexto);
-//    }
-//
-//    @Override
-//    public Optional<AutorEntity> recuperarAutorPorNombre(String nombreAutor) {
-//        return autorJpaRepository.findByNombreAutor(nombreAutor);
-//    }
-//
-//    @Override
-//    public Optional<TemaEntity> recuperarTemaPorNombre(String nombreTema) {
-//        return temaJpaRepository.findByNombreTema(nombreTema);
-//    }
-//
-//    @Override
-//    public Optional<SupertemaEntity> recuperarSupertemaPorNombre(String nombreSupertema) {
-//        return supertemaJpaRepository.findByNombreSupertema(nombreSupertema);
-//    }
-//
-//    @Override
-//    public void eliminarAutor(AutorEntity autor) {
-//        autorJpaRepository.delete(autor);
-//    }
-//
-//    @Override
-//    public void eliminarTexto(TextoEntity texto) {
-//        textoJpaRepository.delete(texto);
-//    }
-//
-//    @Override
-//    public void eliminarTema(TemaEntity tema) {
-//        temaJpaRepository.delete(tema);
-//    }
-//
-//    @Override
-//    public void eliminarSupertema(SupertemaEntity supertema) {
-//        supertemaJpaRepository.delete(supertema);
-//    }
-//
-//
-//}
+package com.mariots.biblioteca.bibliotecawebadmin.repository;
+
+import com.mariots.biblioteca.bibliotecawebadmin.api.models.Autor;
+import com.mariots.biblioteca.bibliotecawebadmin.api.models.Supertema;
+import com.mariots.biblioteca.bibliotecawebadmin.api.models.Tema;
+import com.mariots.biblioteca.bibliotecawebadmin.api.models.Texto;
+import com.mariots.biblioteca.bibliotecawebadmin.api.models.nuevorecurso.AutorNuevo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public class RepositoryBibliotecaImpl implements RepositoryBiblioteca {
+
+    @Autowired
+    BibliotecaRestProxy proxy;
+
+    @Override
+    public Optional<List<Autor>> recuperarAutores() {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Tema>> recuperarTemas() {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Supertema>> recuperarSupertemas() {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Texto>> recupearTextos() {
+        return Optional.empty();
+    }
+//Recuperar por Id
+    @Override
+    public Optional<Autor> recuperarAutorPorId(int idAutor) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Tema> recuperarTemaPorId(int idTema) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Supertema> recuperarSupertemaPorId(int idSupertema) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Texto> recuperarTextoPorId(int idTexto) {
+        return Optional.empty();
+    }
+//Recuperar por nombre
+    @Override
+    public Optional<Autor> recuperarAutorPorNombre(String nombreAutor) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Tema> recuperarTemaPorNombre(String nombreTema) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Supertema> recuperarSupertemaPorNombre(String nombreSupertema) {
+        return Optional.empty();
+    }
+//Recuperar por otro Recurso
+    @Override
+    public Optional<List<Texto>> recuperarTextosPorAutor(int idAutor) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Texto>> recuperarTextosPorTema(int idTema) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Texto>> recuperarTextosPorSupertema(int idSupertema) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Tema>> recuperarTemasPorSupertema(int idSupertema) {
+        return Optional.empty();
+    }
+
+    //Guardar Recurso
+    @Override
+    public ResponseEntity<Autor> guardarAutor(AutorNuevo autor) {
+        return proxy.registrarNuevoAutor(autor);
+    }
+
+
+
+}
