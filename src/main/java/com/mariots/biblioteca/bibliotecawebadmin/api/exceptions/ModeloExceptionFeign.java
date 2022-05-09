@@ -2,16 +2,15 @@ package com.mariots.biblioteca.bibliotecawebadmin.api.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
-@Getter
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Builder
-public class ModeloException{
-
-    private LocalDateTime fechaYHora;
+public class ModeloExceptionFeign {
+    private String fechaYHora;
     private String informacion;
     private String accionRecomendada;
     private String detalles;
